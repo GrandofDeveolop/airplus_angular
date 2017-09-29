@@ -1,14 +1,9 @@
 import { Component } from '@angular/core';
-export class Hero {
+import { TodoAppComponent } from './todo-app/todo-app.component';
+// import { TodoService, CommonService } from "../core/services";
 
-  id: number;
-  name: string;
-}
-const HEROES: Hero[] = [
-  { id: 11 , name: 'Mr M'},
-  { id: 12 , name: 'Jack '}
-];
 @Component({
+  moduleId: module.id,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
@@ -17,9 +12,5 @@ const HEROES: Hero[] = [
 
 export class AppComponent {
   title = 'title of hereos';
-  heroes = HEROES;
-  selectHero: Hero;
-  onSelect(hero: Hero): void {
-    this.selectHero = hero;
-  }
+
 }
